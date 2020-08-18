@@ -10,8 +10,8 @@ class DocumentRepository(private val dataSource: DocumentDataSource, private val
 
     suspend fun deleteDocument(document: Document) = dataSource.remove(document)
 
-    suspend fun setOpenDocument(document: Document) = openDocumentDataSource.setOpenDocument(document)
+    fun setOpenDocument(document: Document) = openDocumentDataSource.setOpenDocument(document)
 
-    suspend fun getOpenDocument() = openDocumentDataSource.getOpenDocument()
+    fun getOpenDocument() = openDocumentDataSource.getOpenDocument()
 
 }
